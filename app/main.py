@@ -5,7 +5,7 @@ def get_human_age(cat_age: int, dog_age: int) -> list:
     Rules:
     Cat: first 15 years = 1 human year, next 9 = +1, then every 4 = +1
     Dog: first 15 years = 1 human year, next 9 = +1, then every 5 = +1
-a
+
     Args:
         cat_age: Cat's age in cat years
         dog_age: Dog's age in dog years
@@ -18,6 +18,10 @@ a
         get_human_age(15, 15) == [1, 1]
         get_human_age(24, 24) == [2, 2]
     """
+
+    if type(cat_age) is not int or type(dog_age) is not int:
+        raise TypeError("Ages must be integers")
+
     cat = 0
     dog = 0
 
